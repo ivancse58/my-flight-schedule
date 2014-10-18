@@ -1,0 +1,221 @@
+/* ::::: https://storage.aerocrs.com/74/general.css ::::: */
+
+body { background: url('bg.gif') repeat-x scroll center top transparent; color: rgb(97, 97, 97); font-family: Ariel,sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; margin: 0px auto; }
+form { margin: 0px; padding: 0px; }
+#cloud-container { height: 100%; width: 100%; }
+.clearfix { display: block; }
+.float_left { float: left; display: inline; }
+.float_right { float: right; display: inline; }
+.bold { font-family: Ariel,sans-serif ! important; }
+strong { font-family: Ariel,sans-serif ! important; }
+#container { width: 915px; margin: auto; color: rgb(97, 97, 97); position: relative; height: 100%; }
+.tilte_wh { color: rgb(255, 255, 255); font-size: 14px; font-weight: bold; }
+.t_10gr { color: rgb(97, 97, 97); font-size: 10px; font-weight: normal; }
+.t_10blprogress { font-size: 10px; font-weight: normal; line-height: 18px; }
+.t_10blackprogress { color: rgb(0, 0, 0); font-size: 10px; font-weight: normal; line-height: 18px; }
+.t_11bl { font-size: 11px; font-weight: normal; text-decoration: none; }
+.t_11wh { color: rgb(255, 255, 255); font-size: 11px; font-weight: normal; }
+.t_11whd { color: rgb(255, 255, 255); font-size: 11px; font-weight: normal; line-height: 20px; }
+.t_title { color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; float: left; display: inline; line-height: 30px; padding-left: 7px; }
+.t_12bl { color: rgb(0, 0, 0); font-size: 12px; font-weight: normal; }
+.paddrl15 { padding-left: 15px; padding-right: 15px; }
+.paddrl5 { padding-left: 8px; padding-right: 8px; }
+.padd3 { padding: 3px; }
+.paddb10 { padding-bottom: 10px; }
+.paddt3 { padding-top: 3px; }
+.paddt5 { padding-top: 5px; }
+.paddt10 { padding-top: 10px; }
+.paddt15 { padding-top: 15px; }
+.paddt25 { padding-top: 23px; }
+.paddb10 { padding-bottom: 10px; }
+.paddl5 { padding-left: 5px; }
+.paddl10 { padding-left: 10px; }
+.paddl14 { padding-left: 14px; }
+.paddr5 { padding-right: 5px; }
+.pixgif335 { width: 335px; height: 1px; color: rgb(255, 255, 255); }
+.div_reka { visibility: visible; width: 100%; height: 100%; top: 0px; left: 0px; z-index: 1500; background-color: rgb(0, 0, 0); opacity: 0.5; position: fixed; }
+.div_countries { position: absolute; visibility: visible; z-index: 2000; background: none repeat scroll 0% 0% rgb(255, 255, 255); min-height: 280px; }
+#headerElements { float: left; display: inline; width: 920px; height: 77px; position: relative; margin: auto; top: 0px; }
+.logo { float: left; display: inline; padding-top: 0px; z-index: 8; top: 0px; }
+.callcenter { color: rgb(97, 97, 97); font-size: 14px; text-align: right; float: right; width: 100%; }
+.langDiv { margin-top: 4px; text-align: right; float: right; width: 100%; }
+.userHello { list-style: none outside none; text-decoration: none; text-align: left; font-size: 12px; font-weight: normal; width: 370px; float: right; display: inline; line-height: 18px; margin-top: 4px; }
+#dropdown-wrap { width: 920px; margin: 15px auto; float: right; z-index: 1000; padding: 0px; }
+ul.dropdown { position: relative; list-style: none outside none; text-decoration: none; z-index: 200; margin: 0px; padding: 0px; }
+ul.dropdown li { float: left; list-style: none outside none; text-decoration: none; }
+ul.dropdown a:hover { text-decoration: none; }
+ul.dropdown a:active { text-decoration: none; }
+ul.dropdown li a { display: block; padding: 4px 8px; list-style: none outside none; text-decoration: underline; }
+ul.dropdown li:last-child a {  }
+ul.dropdown li.hover, ul.dropdown li:hover { position: relative; list-style: none outside none; text-decoration: none; }
+ul.dropdown ul { width: 150px; visibility: hidden; position: absolute; top: 100%; left: 0px; text-decoration: none; margin: 0px; padding: 0px; }
+ul.dropdown ul li { border-bottom: 1px solid rgb(204, 204, 204); float: none; width: 151px; text-decoration: none; }
+ul.dropdown ul li a { border-right: medium none; width: 135px; display: inline-block; text-decoration: none; }
+ul.dropdown li:hover > ul { visibility: visible; text-decoration: none; }
+.top_nav_link { text-decoration: underline; }
+.top_nav_link:hover { color: rgb(255, 255, 255); text-decoration: none; }
+.link_foot:link { color: rgb(72, 72, 72); font-size: 9px; text-decoration: underline; padding-right: 5px; padding-left: 5px; }
+.link_foot:visited { color: rgb(72, 72, 72); font-size: 9px; text-decoration: underline; padding-right: 5px; padding-left: 5px; }
+.link_foot:hover { text-decoration: none; }
+.mformselect2 { color: rgb(0, 0, 0); font-size: 12px; border: 1px solid rgb(205, 205, 205); height: 20px; padding-left: 2px; }
+.mformselect3 { color: rgb(0, 0, 0); font-size: 11px; border: 1px solid rgb(205, 205, 205); height: 16px; padding-left: 2px; }
+.mformtext { color: rgb(0, 0, 0); font-size: 13px; border: 1px solid rgb(205, 205, 205); height: 18px; width: 192px; padding-left: 2px; }
+.Largebutton_Orange { background-image: url('website-container.png'); background-position: -191px -61px; width: 160px; height: 39px; line-height: 35px; background-repeat: no-repeat; color: rgb(255, 255, 255); font-size: 17px; text-decoration: none; cursor: pointer; padding: 0px; text-align: center; font-weight: bold; }
+.Largebutton_Orange:hover { background-image: url('website-container.png'); background-position: -191px -102px; width: 160px; height: 38px; line-height: 35px; background-repeat: no-repeat; color: rgb(255, 255, 255); font-size: 17px; text-decoration: none; cursor: pointer; padding: 1px 0px 0px; text-align: center; font-weight: bold; }
+.Backbutton_Orange { background-image: url('website-container.png'); background-position: -357px -61px; width: 59px; height: 22px; line-height: 15px; background-repeat: no-repeat; color: rgb(255, 255, 255); font-size: 12px; text-decoration: none; cursor: pointer; padding: 0px; text-align: center; font-weight: normal; }
+.Backbutton_Orange:hover { background-image: url('website-container.png'); background-position: -357px -83px; width: 59px; height: 22px; line-height: 15px; background-repeat: no-repeat; color: rgb(255, 255, 255); font-size: 12px; text-decoration: none; cursor: pointer; padding: 0px; text-align: center; font-weight: normal; }
+.Smallbutton_Left { background-image: url('website-container.png'); background-position: -27px -148px; width: 94px; height: 34px; line-height: 31px; background-repeat: no-repeat; color: rgb(255, 255, 255); font-size: 13px; text-decoration: none; cursor: pointer; padding: 0px; text-align: center; font-weight: bold; }
+.Smallbutton_Left:hover { background-image: url('website-container.png'); background-position: -27px -185px; width: 94px; height: 33px; line-height: 31px; background-repeat: no-repeat; color: rgb(255, 255, 255); font-size: 13px; text-decoration: none; cursor: pointer; padding: 1px 0px 0px; text-align: center; font-weight: bold; }
+.bt_previous { float: left; display: inline; margin: 3px; background-image: url('website-container.png'); background-position: -28px -250px; background-repeat: no-repeat; width: 158px; height: 22px; padding-left: 18px; }
+.bt_previous a { color: rgb(255, 255, 255); font-size: 9px; line-height: 22px; text-decoration: none; }
+.bt_next { float: right; display: inline; margin-right: 3px; margin-top: 3px; background-image: url('website-container.png'); background-position: -28px -225px; background-repeat: no-repeat; width: 158px; height: 22px; text-align: right; }
+.bt_next a { color: rgb(255, 255, 255); font-size: 9px; line-height: 22px; text-decoration: none; padding-right: 25px; }
+#login_inner ul { margin: 0px; list-style: none outside none; overflow: hidden; font-size: 12px; color: rgb(0, 0, 0); padding: 0px; }
+#login_inner ul li { float: left; margin: 0px; font-size: 12px; text-align: left; color: rgb(0, 0, 0); }
+#login_inner { float: left; display: inline; margin: 35px 0px 0px 30px; padding: 0px; }
+.div_login { border-radius: 12px; display: inline; background-repeat: no-repeat; position: absolute; visibility: visible; top: 0px; left: 0px; z-index: 2500; width: 361px; height: 208px; background-color: rgb(255, 255, 255); }
+#agent_crslogin { width: 171px; height: 79px; margin-top: 0px; }
+#agent_crslogin ul { margin: 0px 0px 0px 10px; padding: 4px 0px 0px; }
+#agent_crslogin ul li { list-style-type: none; margin: 0px; padding: 0px; line-height: 15px; }
+#agent_crslogin a { font-size: 11px; text-decoration: underline; }
+#agent_crslogin a:hover { font-size: 11px; text-decoration: none; }
+.lineblue { width: 620px; float: left; display: inline; margin-left: 24px; height: 1px; padding-left: 14px; }
+.banner_right { float: left; display: inline; width: 171px; height: 56px; background-color: rgb(255, 255, 255); border-radius: 12px; position: relative; background-repeat: no-repeat; }
+.bg_form_wrap { position: relative; padding: 4px 0px 0px 8px; float: left; display: inline; }
+.bg_form { position: absolute; right: 3px; top: 6px; }
+#footer { float: left; color: rgb(255, 255, 255); padding: 0px; text-align: center; width: 100%; height: 90px; }
+#foot_wrap { width: 900px; margin: auto; padding-top: 5px; text-align: left; color: rgb(72, 72, 72); font-size: 11px; }
+.footer2 { font-size: 10px; }
+.close_bt { position: absolute; right: 5px; top: 5px; }
+#progress { border: 3px solid rgb(255, 255, 255); float: left; display: inline; margin-top: 0px; margin-left: 5px; min-width: 350px; height: 16px; background-repeat: no-repeat; }
+#progress ul { margin: 0px; list-style: none outside none; overflow: hidden; font-size: 10px; color: rgb(97, 97, 97); padding: 0px; height: 18px; }
+#progress ul li { float: left; margin: 0px; font-size: 10px; text-align: center; color: rgb(97, 97, 97); line-height: 18px; }
+#progress ul li a { color: rgb(30, 153, 233); font-size: 10px; font-weight: normal; line-height: 18px; text-decoration: none; }
+#search_inner { margin-top: 1px; width: 678px; float: left; display: inline; background-color: rgb(255, 255, 255); position: relative; border: 1px solid rgb(97, 97, 97); border-radius: 15px; padding-bottom: 8px; }
+.result_top { float: left; display: inline; width: 678px; border-top-right-radius: 13px; border-top-left-radius: 13px; position: relative; }
+.dayswrap { float: left; display: inline; border: 0px solid red; width: 660px; padding-left: 7px; }
+.days { float: left; display: inline; line-height: 20px; 
+       /*width: 72px;*/ 
+       text-align: center; }
+.dayslink { font-size: 9px; text-align: left; text-decoration: none; }
+.day_sel { float: left; color: rgb(0, 0, 0); font-weight: bold; text-align: center; line-height: 20px; display: inline; background-color: rgb(255, 255, 255); border-top-right-radius: 4px; border-top-left-radius: 4px; position: relative; background-repeat: no-repeat; width: 108px; height: 21px; }
+#search { float: left; display: inline; margin: 0px; padding: 0px; }
+.search_left { float: left; display: inline; width: 130px; margin-left: 34px; color: rgb(123, 126, 127); font-size: 18px; font-weight: normal; margin-top: 40px; }
+#search ul { margin: 0px; list-style: none outside none; overflow: hidden; font-size: 12px; color: rgb(97, 97, 97); padding: 0px; }
+#search ul li { float: left; margin: 0px; font-size: 12px; text-align: left; color: rgb(97, 97, 97); line-height: 18px; }
+.imgcontainer { display: inline-block; background-image: url('website-container.png'); background-repeat: no-repeat; border: 0px solid red; }
+.logo_big { background-position: -660px 0px; height: 100px; width: 270px; }
+.logo_AeroCRS { background-position: -35px -278px; height: 22px; width: 130px; }
+.noSeats { background-position: -731px -201px; height: 22px; width: 55px; }
+.arrowrRight_Reverse_Gray { background-position: -662px -132px; height: 18px; width: 18px; }
+.arrowDown_Small_Orange { background-position: -748px -152px; height: 13px; width: 13px; }
+.arrowDown_Border_Orange { background-position: -692px -151px; height: 18px; width: 18px; }
+.arrowRight_Reverse_Orange { background-position: -677px -153px; height: 14px; width: 14px; }
+.arrowDown_Gray { background-position: -707px -131px; height: 20px; width: 24px; }
+.X_Gray { background-position: -732px -132px; height: 19px; width: 19px; }
+.calendar_Gray { background-position: -683px -132px; height: 18px; width: 23px; }
+.planeRight_Black { background-position: -798px -133px; height: 18px; width: 20px; }
+.planeLeft_Black { background-position: -799px -151px; height: 18px; width: 20px; }
+a:link { text-decoration: underline; color: rgb(0, 113, 116); }
+a:visited { text-decoration: underline; color: rgb(0, 113, 116); }
+a:hover { text-decoration: none; }
+.searchFrom{
+	background-color: #ef4036; 
+	border-radius: 12px; 
+	width: 327px; 
+	position: relative; 
+	float: left; 
+	background-repeat: no-repeat; 
+	margin-top: 10px; 
+	margin-left: 5px; 
+	padding-top: 5px; 
+	padding-left: 2px; 
+	margin-bottom: 5px; 
+	border: 1px solid rgb(149, 146, 147); 
+	height: 300px;
+        color: white;
+}
+#wcs3_Depart_Airport_list, #wcs3_Arrive_Airport_list{
+ height: 30px;
+ width: 150px !important;
+ margin-bottom: 4px;
+}
+#wcs3_ReturnDate, #wcs3_DepartureDate{
+    height: 30px;
+    width: 142px;
+    cursor: pointer;
+    padding: 0 !important;
+    padding-left: 0.428571rem !important;   
+    background: white url("datepicker-icon.png") no-repeat scroll 122px center;
+    margin-bottom: 4px;
+}
+#wcs3_Adult_list, #wcs3_Children_list{
+/*    width: 90px;*/
+}
+.wcs3_r1c1{
+    width: 150px;
+    margin-bottom: 4px;
+}
+.wcs3_r1c2{
+    width: 165px;
+    margin-bottom: 4px;
+}
+
+.wcs3_r3c1{
+    width: 108px;
+}
+.wcs3_r3c2{
+    width: 70px;
+}
+.wcs3_r3c3{
+    width: 70px;
+}
+.wcs3_r3c4{
+    width: 70px;
+}
+.wcs3_r2c1{
+    width: 300px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid;
+}
+.wcs3_r4c1{
+    width: 150px;
+/*    margin-bottom: 4px;    */
+    float: left; 
+}
+.wcs3_r4c2{
+    float: left; 
+    width: 150px;
+    /*margin-top: 10px;*/
+    /*margin-bottom: 4px;*/    
+}
+.coupon{
+    /*margin-top: 10px;*/
+    width: 90px;
+    background-color: #5f3c31;
+    color: white;
+}
+
+.wcs3_r5c1{
+    float: left; 
+    width: 185px;
+    margin-top: 5px;
+    margin-bottom: 5px;    
+}
+.wcs3_r5c2{
+    float: left; 
+    width: 70px;
+    margin-top: 5px;
+    margin-bottom: 5px; 
+    color: #325163;
+    font-size:9px;
+}
+.wcs3_r5c3{
+    float: left; 
+    width: 60px;
+    margin-top: 5px;
+    margin-bottom: 5px;    
+    color: #325163;
+    font-size:9px;
+}

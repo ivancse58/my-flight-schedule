@@ -1,0 +1,698 @@
+/*-- generic --*/
+
+
+/* general --*/
+body {background:url(bg.gif) repeat-x scroll center top;color:#616161;font-family:Ariel, sans-serif;font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;margin:0px auto;}
+form {margin: 0; padding: 0; }
+#cloud-container{height:100%;width:100%;}
+.clearfix{display:block;}
+.float_left{float:left;display:inline;}
+.float_right{float:right;display:inline;}
+.bold{font-family:Ariel, sans-serif !important;}
+strong{font-family:Ariel, sans-serif !important;}
+#container{width:915px;margin:auto;color:#616161;position:relative;height:100%;}
+#searchwrap{border-radius: 12px;width:215px;height:285px;position:relative;float:left;background-repeat:no-repeat;margin-top:10px;margin-left:5px;padding-top:5px;padding-left:2px;margin-bottom:5px;border: 1px solid #959293;}
+.bgnorepeat{background-repeat:no-repeat;}
+/* general --*/
+
+
+/* font --*/
+.tilte_wh{color:#fff;font-size:14px;font-weight:bold;}
+.t_10gr{color:#616161;font-size:10px;font-weight:normal;}
+.tred{color:#8d0000;font-size:11px;font-weight:bold;}
+.t_10blprogress{font-size:10px;font-weight:normal;line-height:18px;}
+.t_10blackprogress{color:#000;font-size:10px;font-weight:normal;line-height:18px;}
+.t_11bl{font-size:11px;font-weight:normal;text-decoration:none;}
+.t_11wh{color:#fff;font-size:11px;font-weight:normal;}
+.t_11whd{color:#fff;font-size:11px;font-weight:normal;line-height:20px;}
+.t_title{color:#000;font-size:20px;font-weight:normal;float:left;display:inline;line-height:30px;padding-left:7px;}
+.t_12bl{color:#000;font-size:12px;font-weight:normal;}
+.t_14or{font-size: 14px;font-weight: bold;}
+.t_12or{font-size: 12px;font-weight: bold;}
+/*End font --*/
+
+
+/* padding --*/
+.paddrl15{padding-left:15px;padding-right:15px;}
+.paddrl5{padding-left:8px;padding-right:8px;}
+.paddrl2{padding-right:2px;padding-left:2px;}
+.padd3{padding:3px;}
+.paddb10{padding-bottom:10px;}
+.paddt3{padding-top:3px;}
+.paddt5{padding-top:5px;}
+.paddt10{padding-top:10px;}
+.paddt15{padding-top:15px;}
+.paddt25{padding-top:23px;}
+.paddb10{padding-bottom:10px;}
+.paddl2{padding-left:2px;}
+.paddl5{padding-left:5px;}
+.paddl10{padding-left:10px;}
+.paddl14{padding-left:14px;}
+.paddl45{padding-left:45px;}
+.paddr5{padding-right:5px;}
+.paddr10{padding-right:10px;}
+.paddr12{padding-right:12px;}
+.paddr50{padding-right:50px;}
+.mart5m{margin-top:-5px;}
+.mart7m{margin-top:-7px;}
+/*End padding --*/
+
+
+/*  Spacing --*/
+.pixgif1 {width:1px;height:1px;color:#fff;}
+.pixgif1_5 {width:1px;height:5px;color:#fff;}
+.pixgif10 {width:10px;height:1px;color:#fff;}
+.pixgif55 {width:55px;height:1px;color:#fff;}
+.pixgif85 {width:85px;height:1px;color:#fff;}
+.pixgif245 {width:245px;height:1px;color:#fff;}
+.pixgif335 {width:335px;height:1px;color:#fff;}
+.Verticalline {width:2px;height:24px;position:relative;background-color:#959293;background-repeat:no-repeat;margin-top:1px;margin-left:2px;margin-right:2px;}
+.div_reka {position:absolute;visibility:visible;width:100%;height:100%;top:0;left:0;z-index:1500;background-color:#000;-moz-opacity:0.50 ;filter:alpha(opacity: 50);opacity:0.50;position:fixed;}
+.div_countries{position:absolute;visibility:visible; z-index:2000;background:#fff;min-height:280px;}
+/*End  Spacing --*/
+
+
+/* header --*/
+#headerElements{float:left;display:inline;width:920px;height:77px;position:relative;margin:auto;top:0;}
+.logo{float:left;display:inline;padding-top:0px;z-index:8;top:0;}
+.callcenter{color:#616161;font-size:14px;text-align:right;float:right;width:100%;}
+.langDiv{margin-top:4px; text-align: right;float:right;width:100%;}
+.userHello{list-style: none;text-decoration: none;text-align:left;font-size:12px;font-weight:normal;width:370px;float:right;display:inline;line-height:18px;margin-top:4px;}
+/*End header --*/
+
+
+/* Top Menu --*/
+/* LEVEL ONE */
+#dropdown-wrap { width: 920px; margin: 15px auto; float: right;z-index:1000; padding: 0px; } 
+ul.dropdown { position: relative; list-style: none;text-decoration: none;z-index:200;margin: 0px; padding: 0px;}
+ul.dropdown li { float: left; zoom: 1; list-style: none;text-decoration: none;}
+ul.dropdown a:hover { text-decoration: none; }
+ul.dropdown a:active { text-decoration: none; }
+ul.dropdown li a { display: block; padding: 4px 8px; list-style: none;text-decoration: underline;}
+ul.dropdown li:last-child a {  } /* Doesn't work in IE */
+ul.dropdown li.hover,
+ul.dropdown li:hover {  position: relative; list-style: none;text-decoration: none;}
+ul.dropdown li.hover a { list-style: none;text-decoration: none;}
+
+/* LEVEL TWO */
+ul.dropdown ul { width: 150px; visibility: hidden; position: absolute; top: 100%; left: 0; text-decoration: none;margin: 0px; padding: 0px;}
+ul.dropdown ul li { border-bottom: 1px solid #ccc; float: none; width: 151px;text-decoration: none;}   
+ul.dropdown ul li a { border-right: none; width: 135px; display: inline-block;text-decoration: none;} /* IE 6 & 7 Needs Inline Block */
+
+/* LEVEL THREE */
+ul.dropdown ul ul { margin-left:2px; left: 100%; top: 0;width:115px; border:0px solid black;text-decoration: none;}
+ul.dropdown li:hover > ul { visibility: visible; text-decoration: none;}
+/* End Top Menu --*/
+
+
+/*-- Slider --*/
+#slider { width:auto; overflow: hidden;position: relative; margin: 0px 0; border:0px solid green;}
+/*-- End Slider --*/
+
+
+/* links --*/
+.top_nav_link{text-decoration:underline;}
+.top_nav_link:hover{color:#fff;text-decoration:none;}
+.top_nav_linksel{color:#fff;text-decoration:none;}
+.link12{font-size:12px;font-weight:normal;text-decoration:none;}
+.link12:hover{font-size:12px;font-weight:normal;text-decoration:underline;}
+.link122{font-size:12px;font-weight:normal;text-decoration:underline;line-height:17px;}
+.link122:hover{color:#000;font-size:12px;font-weight:normal;text-decoration:none;line-height:17px;}
+.InvisibleLink{color:#1E99E9;font-size:12px;text-decoration:none;}
+.link_foot:link{color:#484848;font-size:9px;text-decoration:underline;padding-right:5px;padding-left:5px;}
+.link_foot:visited{color:#484848;font-size:9px;text-decoration:underline;padding-right:5px;padding-left:5px;}
+.link_foot:hover{text-decoration:none;}
+/*End links --*/
+
+
+/* selects --*/
+.mformselect{color:#000;font-size:11px;border:1px solid #cdcdcd;height:18px;padding-left:2px;}
+.mformselect2{color:#000;font-size:12px;border:1px solid #cdcdcd;height:20px;padding-left:2px;}
+.mformselect3{color:#000;font-size:11px;border:1px solid #cdcdcd;height:16px;padding-left:2px;}
+.mformtext{color:#000;font-size:13px;border:1px solid #cdcdcd;height:18px;width:192px;padding-left:2px;}
+/*End selects --*/
+
+
+/*  Buttons --*/	
+.Smallbutton_Orange {background-image:url(Website-container.png);background-position: -125px -148px;width: 94px; height:34px;line-height:31px;background-repeat:no-repeat;color:#fff;font-size:13px;text-decoration:none;cursor:pointer;padding:0px;text-align:center;font-weight:bold;}
+.Smallbutton_Orange:hover {background-image : url(Website-container.png);background-position: -126px -185px;width:94px; height:33px;line-height:31px;background-repeat:no-repeat;color:#fff;font-size:13px;text-decoration:none;cursor:pointer;padding:0px;text-align:center;font-weight:bold;padding-top:1px;}
+.Smallbutton_Orange_onclick {background-image : url(Website-container.png);background-position: -126px -185px;width:94px; height:33px;line-height:31px;background-repeat:no-repeat;color:#f0f0f0;font-size:13px;text-decoration:none;cursor:pointer;padding:0px;text-align:center;font-weight:bold;padding-top:1px;}
+.Largebutton_Orange {background-image:url(Website-container.png);background-position: -191px -61px;width: 160px; height:39px;line-height:35px;background-repeat:no-repeat;color:#fff;font-size:17px;text-decoration:none;cursor:pointer;padding:0px;text-align:center;font-weight:bold;}
+.Largebutton_Orange:hover {background-image : url(Website-container.png);background-position: -191px -102px;width:160px; height:38px;line-height:35px;background-repeat:no-repeat;color:#fff;font-size:17px;text-decoration:none;cursor:pointer;padding:0px;text-align:center;font-weight:bold;padding-top:1px;}
+.Largebutton_Orange_onclick {background-image : url(Website-container.png);background-position: -191px -102px;width:160px; height:38px;line-height:35px;background-repeat:no-repeat;color:#f0f0f0;font-size:17px;text-decoration:none;cursor:pointer;padding:0px;text-align:center;font-weight:bold;padding-top:1px;}
+.Backbutton_Orange{background-image:url(Website-container.png);background-position: -357px -61px;width: 59px; height:22px;line-height:15px;background-repeat:no-repeat;color:#fff;font-size:12px;text-decoration:none;cursor:pointer;padding:0px;text-align:center;font-weight:normal;}
+.Backbutton_Orange:hover {background-image:url(Website-container.png);background-position: -357px -83px;width:59px; height:22px;line-height:15px;background-repeat:no-repeat;color:#fff;font-size:12px;text-decoration:none;cursor:pointer;padding:0px;text-align:center;font-weight:normal;}
+.Backbutton_Orange_onclick {background-image:url(Website-container.png);background-position: -357px -83px;width:59px; height:22px;line-height:15px;background-repeat:no-repeat;color:#f0f0f0;font-size:12px;text-decoration:none;cursor:pointer;padding:0px;text-align:center;font-weight:normal;}
+.Smallbutton_Left {background-image:url(Website-container.png);background-position: -27px -148px;width: 94px; height:34px;line-height:31px;background-repeat:no-repeat;color:#fff;font-size:13px;text-decoration:none;cursor:pointer;padding:0px;text-align:center;font-weight:bold;}
+.Smallbutton_Left:hover {background-image : url(Website-container.png);background-position: -27px -185px;width:94px; height:33px;line-height:31px;background-repeat:no-repeat;color:#fff;font-size:13px;text-decoration:none;cursor:pointer;padding:0px;text-align:center;font-weight:bold;padding-top:1px;}
+.Smallbutton_Left_onclick {background-image : url(Website-container.png);background-position: -27px -185px;width:94px; height:33px;line-height:31px;background-repeat:no-repeat;color:#f0f0f0;font-size:13px;text-decoration:none;cursor:pointer;padding:0px;text-align:center;font-weight:bold;padding-top:1px;}
+.Largebutton_Left {background-image:url(Website-container.png);background-position: -25px -61px;width: 160px; height:39px;line-height:35px;background-repeat:no-repeat;color:#fff;font-size:17px;text-decoration:none;cursor:pointer;padding:0px;text-align:center;font-weight:bold;}
+.Largebutton_Left:hover {background-image : url(Website-container.png);background-position: -25px -102px;width:160px; height:38px;line-height:35px;background-repeat:no-repeat;color:#fff;font-size:17px;text-decoration:none;cursor:pointer;padding:0px;text-align:center;font-weight:bold;padding-top:1px;}
+.Largebutton_Left_onclick {background-image : url(Website-container.png);background-position: -25px -102px;width:160px; height:38px;line-height:35px;background-repeat:no-repeat;color:#f0f0f0;font-size:17px;text-decoration:none;cursor:pointer;padding:0px;text-align:center;font-weight:bold;padding-top:1px;}
+.bt_previous{float:left;display:inline;margin:3px;background-image:url(Website-container.png);background-position: -28px -250px;background-repeat:no-repeat;width:158px;height:22px;padding-left:18px;}
+.bt_previous a{color:#fff;font-size:9px;line-height:22px;text-decoration:none;}
+.bt_next{float:right;display:inline;margin-right:3px;margin-top:3px;background-image:url(Website-container.png);background-position: -28px -225px;background-repeat:no-repeat;width:158px;height:22px;text-align:right;}
+.bt_next a{color:#fff;font-size:9px;line-height:22px;text-decoration:none;padding-right:25px;}
+/*End  Buttons --*/
+
+
+/* login --*/
+#login_inner ul{margin:0px; list-style:none; overflow:hidden;font-size:12px;color:#000;padding:0px;}
+#login_inner ul li { float:left; margin:0px;font-size:12px;text-align:left;color:#000;}
+#login_inner{float:left;display:inline;margin:35px 0px 0px 30px;padding:0px;}
+.div_login{border-radius: 12px;display:inline;background-repeat:no-repeat;position:absolute;visibility:visible;top:0px;left:0px;z-index:2500;width:361px;height:208px;background-color:#fff;}
+#agent_login{width:171px;height:79px;margin-top:2px;}
+#agent_login ul {margin:0px 0px 0px 10px;padding:5px 0px 0px 0px;}	
+#agent_login ul li{ list-style-type: none;margin:0px;padding:0px;line-height:20px;}	
+#agent_login a{font-size:11px;text-decoration:underline;}	
+#agent_login a:hover{font-size:11px;text-decoration:none;}	
+#agent_crslogin{width:171px;height:79px;margin-top:0px;}
+#agent_crslogin ul {margin:0px 0px 0px 10px;padding:4px 0px 0px 0px;}	
+#agent_crslogin ul li{ list-style-type: none;margin:0px;padding:0px;line-height:15px;}	
+#agent_crslogin a{font-size:11px;text-decoration:underline;}	
+#agent_crslogin a:hover{font-size:11px;text-decoration:none;}	
+.lineblue{width:620px;float:left;display:inline;margin-left:24px;height:1px;padding-left:14px;}
+.banner_right{float:left;display:inline;width:171px;height:56px;background-color:#fff;border-radius: 12px;position:relative;background-repeat:no-repeat;}
+/*End login --*/
+
+
+/* Pop-up's --*/
+.hint {display: none;position: absolute;left: 290px;width: 200px;margin-top: -8px;border: 1px solid #afbdc3;padding: 5px 6px;color:#616161;font-size:11px;background-color:#efc47f;}
+span.info{position:relative;background-color:#fff;color:#000;text-decoration:none}
+span.info:hover{z-index:25;}
+span.info span{display: none}
+span.info:hover span{ display:block;position:absolute;top:2em; left:-17em; width:17.5em;padding-left:5px;border:1px solid #959293;background-color:#efc47f; color:#000;text-align: left}
+span.popup{position:relative;background-color:#fff;color:#000;text-decoration:none}
+span.popup:hover{z-index:25;}
+span.popup span{display: none}
+span.popup:hover span{display:block;position:absolute;top:2em; left:-4.5em;; width:4em;border:1px solid #959293;background-color:#efc47f; color:#000;text-align: center}
+span.popup2{position:relative; background-color:#fff;color:#000;text-decoration:none}
+span.popup2:hover{z-index:25;}
+span.popup2 span{display: none}
+span.popup2:hover span{ display:block;position:absolute;top:2em; left:-7.5em; width:6.85em;border:1px solid #959293;background-color:#efc47f; color:#000;text-align: center}
+span.AMDpopup{position:relative; background-color:#fff;color:#000;text-decoration:none}
+span.AMDpopup:hover{z-index:25;}
+span.AMDpopup span{display: none}
+span.AMDpopup:hover span{ display:block;position:absolute;top:-5em; left:-17.5em; width:20em;border:1px solid #959293;background-color:#fff; color:#000;text-align: left;padding:2px;}
+/* Version 4 */
+span.PTLpopup{position:relative;text-decoration:none;}
+span.PTLpopup:hover{z-index:25;}
+span.PTLpopup span{display: none}																/* top - right - bottom - left*/
+span.PTLpopup:hover span{ display:block;position:absolute;top:-6em; left:-1.25em; width:13.5em;padding:3px 3px 3px 5px;border:1px solid #959293;background-color:#efc47f; color:#000;text-align: left;font-size:12px;line-height:17px;font-weight:normal;}
+/* Version 4 */
+/*End Pop-up's --*/
+
+
+
+/*-- End generic --*/
+
+
+/*Index --*/
+#middle_content{width:900px;height:310px;position:relative;}
+#middle_contentleft{border-radius: 12px;position:relative;background-color:#fff;width:731px;height:283px;position:relative;background-repeat:no-repeat;float:left;display:inline;margin-left:-5px;height:305px;width: 720px;border: 1px solid #959293;-webkit-box-shadow: #666 0px 0px 10px;-moz-box-shadow: #666 0px 0px 10px;box-shadow: #666 0px 0px 10px}
+/*End Index --*/
+
+
+/*search*/
+.bg_form_wrap{position:relative;padding:4px 0px 0px 8px;float:left;display:inline;}
+.bg_form{position:absolute;right:3px;top:6px;}
+/*End search --*/
+
+
+/* footer --*/
+#footer {float:left;color:#FFFFFF;padding:0px;text-align:center;width:100%;height:90px;}
+#foot_wrap{width:900px;margin:auto;padding-top:5px;text-align:left;color:#484848;font-size:11px;}
+.footer2{color:#g1g1g1;font-size:10px;}
+/*End footer --*/
+
+		
+/* calendar --*/
+#dateinnerday{float:left;display:inline;height:15px;line-height:19px;margin-left:25px;margin-bottom:5px;padding:0px;}
+.linebl{background-color:#b3bdc5;width:205px;float:left;display:inline;margin:2px 0px 2px 28px;}
+#dateinnerday2{float:left;display:inline;margin:0px 0px 0px 28px;height:21px;line-height:22px;padding:0px;}
+.t_cal_sel{width:20px;height:19px;padding:3px;}
+#calinenr{margin:auto;width:255px;height:258px;}
+#calinenr #dateinner{float:left;display:inline;margin:25px 25px 15px 25px;width:200px;}
+#dateinnerday ul {margin:0px; list-style:none;  overflow:hidden;padding:0px;}
+#dateinnerday ul li { float:left; font-size:12px;color:#000;font-weight:bold;width:30px;text-align:center;}
+#dateinnerday2 ul.menu {margin:0px; list-style:none;  overflow:hidden;padding:0px;}
+#dateinnerday2 ul.menu li { margin:0px;font-size:12px;color:#7b7b7b;font-weight:bold;width:30px;float:left;text-align:center}
+.t_cal_dis{color:#dad9d9;}	
+.top_div_cal{color:#fff;padding-left:10px;padding-bottom:1px;font-weight:bold;line-height:25px;height:28px;width:245px;}
+.div_calendar{position:absolute;visibility:visible; z-index:20;background:#fff;width:255px;height:258px;}
+/*End calendar --*/
+
+
+/* destination --*/
+#countries{float:left;display:inline;}
+#countries ul {overflow:hidden;margin:0px;padding:0px 30px 0px 10px;border:0px solid red;}
+#countries ul li{ font-size: 11px;list-style-type: none;margin:0px;padding:0px;line-height:15px;}
+.destinations{margin-bottom:5px;}
+.destinations a{color:#000;font-size:13px;text-decoration:none;line-height:18px;}
+.destinations a:hover{color:#000;font-size:13px;text-decoration:none;}
+.top_div{color:#fff;padding-left:10px;background-repeat:repeat-x;font-weight:bold;line-height:28px;margin:0px;margin-bottom:1px;}
+.close_bt{position:absolute;right:5px;top:5px;}
+/*End destination --*/
+
+
+/* itinerary --*/
+#itinerary_inner{width:677px;float:left;display:inline;background-color:#fff;border:1px solid #a1a1a1;color:#616161;border-top-right-radius:12px;border-top-left-radius:12px;border-bottom-left-radius:12px;border-bottom-right-radius:12px;position:relative;padding-bottom:10px;}
+.itinerary_inner_head{font-weight:bold;color:#fff;font-size:12px;line-height:20px;padding-left:14px;margin:5px 0px 0px 0px;}
+#itinerary{float:left;display:inline;padding:0px;border:0px solid red;position:relative;width:650px;}
+#itinerary_inner ul{margin:0px; list-style:none; overflow:hidden;font-size:12px;color:#616161;padding:0px;}
+#itinerary_inner ul li { float:left; margin:0px;font-size:12px;text-align:left;color:#616161;line-height:18px;margin-top:2px;}
+#itinerary ul{margin:0px; list-style:none; overflow:hidden;font-size:12px;color:#616161;padding:0px;}
+#itinerary ul li { float:left; margin:0px;font-size:12px;text-align:left;color:#616161;line-height:18px;margin-top:2px;}
+#payment_inner{width:677px;float:left;display:inline;border:1px solid #a1a1a1;color:#616161;border-radius: 12px;background-repeat:no-repeat;}
+/*End itinerary --*/
+
+
+/* flightplan --*/
+.itinerary_inner_head2{float:left;display:inline;color:#000;font-size:12px;line-height:20px;padding-left:14px;font-weight:bold;margin-top:5px;}
+/*End flightplan*/
+
+
+/*search result*/
+#progress{border:3px solid #fff;float:left;display:inline;margin-top:0px;margin-left:5px;min-width:350px;height:16px;background-repeat:no-repeat;}
+#progress ul{margin:0px; list-style:none; overflow:hidden;font-size:10px;color:#616161;padding:0px;height:18px;}
+#progress ul li { float:left; margin:0px;font-size:10px;text-align:center;color:#616161;line-height:18px;}
+#progress ul li a{ color:#1e99e9;font-size:10px;font-weight:normal;line-height:18px;text-decoration:none;}
+/*End search result --*/
+
+
+/* singleflightresult --*/	
+#search_inner{margin-top:1px;width:734px;float:left;display:inline;background-color:#fff;position:relative;border:1px solid #616161;border-top-right-radius:15px;border-top-left-radius:15px;border-bottom-left-radius:15px;border-bottom-right-radius:15px;padding-bottom:8px;}
+.result_top{float:left;display:inline;width:734px;border-top-right-radius:13px;border-top-left-radius:13px;position:relative;}
+.dayswrap{float:left;display:inline;border:0px solid red;width:716px;padding-left:7px;}
+.days{float:left;display:inline;line-height:20px;width:80px;text-align:center;font-size:10px;font-weight: bold;}
+.dayslink{font-size:9px;text-align:left;text-decoration:none;}
+.day_sel{float:left;display:inline;color:#000;font-weight:bold;text-align:center;line-height:20px;display:inline;background-color:#fff;border-top-right-radius:4px;border-top-left-radius:4px;position:relative;background-repeat:no-repeat;width:108px;height:21px;}
+#search{float:left;display:inline;margin:0px;padding:0px;}
+.search_left{float:left;display:inline;width:130px;margin-left:34px;color:#7b7e7f;font-size:18px;font-weight:normal;margin-top:40px;}
+#search ul{margin:0px; list-style:none; overflow:hidden;font-size:12px;color:#616161;padding:0px;}
+#search ul li { float:left; margin:0px;font-size:12px;text-align:left;color:#616161;line-height:18px;}
+/*End singleflightresult --*/
+
+
+/* account --*/
+.details_head{text-align:left;font-size:10px;height:30px;font-weight:bold;padding-left:5px;padding-right:5px;line-height:12px;width:667px;}
+.details_row1{float:left;display:inline;background-color:#fff;color:#5b5f62;font-size:12px;height:25px;margin:0px;font-weight:normal;padding-left:5px;line-height:25px;text-align:center;}
+.details_row1s{float:left;display:inline;background-color:#fff;color:#5b5f62;font-size:9px;margin:0px;font-weight:normal;padding-left:5px;line-height:25px;text-align:center;}
+/*End account --*/
+
+
+/* Image */
+.imgcontainer
+	{
+	display: inline-block;
+	background-image: url(Website-container.png);
+	background-repeat: no-repeat;
+	border:0px solid red;	
+	}
+	
+.logo_big
+	{
+	background-position: -660px 0px;	
+	height:100px;
+	width: 270px
+	}
+	
+.Smallbutton_Down_Green
+	{
+	background-position: -27px -185px;	
+	height:32px;
+	width:94px;
+	}
+
+.Smallbutton_Up_Green
+	{
+	background-position: -27px -148px;	
+	height:32px;
+	width:94px;
+	}
+
+.Smallbutton_Down_Orange
+	{
+	background-position: -126px -185px;	
+	height:32px;
+	width:94px;
+	}	
+	
+.Smallbutton_Up_Orange
+	{
+	background-position: -125px -148px;	
+	height:32px;
+	width:94px;
+	}	
+
+.LargeButton_Down_Orange
+	{
+	background-position: -191px -102px;	
+	height:38px;
+	width:160px;
+	}
+
+.LargeButton_Up_Orange
+	{
+	background-position: -191px -61px;	
+	height:38px;
+	width: 160px;
+	}
+
+.LargeButton_Down_Green
+	{
+	background-position: -25px -102px;	
+	height:38px;
+	width:160px;
+	}
+
+.LargeButton_Up_Green
+	{
+	background-position: -25px -61px;	
+	height:38px;
+	width: 160px;
+	}
+
+.logo_AeroCRS
+	{
+	background-position: -35px -278px;	
+	height:22px;
+	width:130px;
+	}
+
+.noSeats
+	{
+	background-position: -731px -201px;	
+	height:22px;
+	width: 55px;
+	}
+	
+.Refresh
+	{
+	background-position: -796px -198px;
+	width:22px; 
+	height:24px;
+	}
+
+.arrowrRight_Reverse_Gray
+	{
+	background-position: -662px -132px;	
+	height:18px;
+	width:18px;
+	}
+	
+.arrowDown_Small_Orange
+	{
+	background-position: -748px -152px;	
+	height:13px;
+	width:13px;
+	}
+	
+.arrowDown_Big_Orange
+	{
+	background-position: -728px -153px;	
+	height:15px;
+	width:17px;
+	}	
+	
+.arrowRight_Border_Orange
+	{
+	background-position: -711px -151px;	
+	height:18px;
+	width:18px;
+	}	
+	
+.arrowDown_Border_Orange
+	{
+	background-position: -692px -151px;	
+	height:18px;
+	width:18px;
+	}
+	
+.arrowRight_Reverse_Orange
+	{
+	background-position: -677px -153px;	
+	height:14px;
+	width:14px;
+	}
+	
+.arrowDown_Gray
+	{
+	background-position: -707px -131px;	
+	height:20px;
+	width:24px;
+	}
+	
+.arrowLeft_Gray
+	{
+	background-position: -773px -131px;	
+	height:20px;
+	width:20px;
+	}
+	
+.arrowRight_Gray
+	{
+	background-position: -752px -131px;	
+	height:20px;
+	width:20px;
+	}	
+
+.X_Gray
+	{
+	background-position: -732px -132px;	
+	height:19px;
+	width:19px;
+	}
+	
+.X_Red
+	{
+	background-position: -840px -133px;	
+	height:18px;
+	width:18px;
+	}	
+	
+.calendar_Gray
+	{
+	background-position: -683px -132px;	
+	height:18px;
+	width:23px;
+	}
+	
+.calendar_Blank
+	{
+	background-position: -686px -111px;
+	width:17px; 
+	height:16px;
+	}
+	
+.calendar_Full
+	{
+	background-position: -710px -111px;
+	width:17px; 
+	height:16px;
+	}
+	
+.planeRight_Black
+	{
+	background-position: -798px -133px;	
+	height:18px;
+	width:20px;
+	}
+	
+.planeLeft_Black
+	{
+	background-position: -799px -151px;	
+	height:18px;
+	width:20px;
+	}
+	
+.printer
+	{
+	background-position: -821px -133px;	
+	height:18px;
+	width:18px;
+	}
+	
+.printer_GreenPlus
+	{
+	background-position: -662px -109px;
+	width:17px; 
+	height:17px;
+	}
+
+.S_Green
+	{
+	background-position: -875px -133px;	
+	height:18px;
+	width:18px;
+	}
+	
+.ampersat_Purple
+	{
+	background-position: -857px -133px;	
+	height:18px;
+	width:18px;
+	}
+
+.point_Orange
+	{
+	background-position: -780px -156px;	
+	height:10px;
+	width: 10px;
+	}
+
+.creditCard
+	{
+	background-position: -822px -153px;	
+	height:15px;
+	width: 18px;
+	}
+
+.Information
+	{
+	background-position: -840px -152px;	
+	height:16px;
+	width: 16px;
+	}
+
+.flag_it
+	{
+	background-position: -681px -177px;	
+	height:16px;
+	width: 18px;
+	}
+
+.flag_cn
+	{
+	background-position: -737px -177px;
+	height: 16px;
+	width: 18px;
+	}	
+	
+.flag_UK
+	{
+	background-position: -718px -177px;	
+	height:16px;
+	width: 18px;
+	}
+	
+.V_sign
+	{
+	background-position: -894px -134px;	
+	height:16px;
+	width: 12px;
+	}
+.radio_on
+	{
+	background-position: -787px -111px;
+	height:15px;
+	width: 15px;
+	}
+.radio_off
+	{
+	background-position: -773px -111px;
+	height:15px;
+	width: 15px;
+	}	
+.DoubleArrow_Left
+	{
+	background-position: -860px -112px;
+	height:12px;
+	width: 11px;
+	}
+.DoubleArrow_Right
+	{
+	background-position: -843px -112px;
+	height:12px;
+	width: 11px;
+	}
+	
+.Pause
+	{
+	background-position: -808px -111px;
+	height:14px;
+	width: 14px;
+	}
+	
+.Play
+	{
+	background-position: -827px -111px;
+	height:14px;
+	width: 13px;
+	}
+
+._3G
+	{
+	background-position: -885px -247px;
+	height:35px;
+	width: 44px;
+	}
+	
+.Paygate
+	{
+	background-position: -796px -249px;
+	height:30px;
+	width: 82px;
+	}
+
+.PayPal
+	{
+	background-position: -584px -297px;
+	height:30px;
+	width: 75px;
+	}
+
+.MasterCard
+	{
+	background-position: -666px -297px;
+	height:30px;
+	width: 45px;
+	}
+
+.AmericanExpress
+	{
+	background-position: -717px -297px;
+	height:30px;
+	width: 45px;
+	}
+
+.Visa
+	{
+	background-position: -762px -297px;
+	height:30px;
+	width: 57px;
+	}
+
+.M_pesa
+	{
+	background-position: -822px -297px;
+	height:30px;
+	width:50px;
+	}
+
+.airtel
+	{
+	background-position: -584px -252px;
+	height:30px;
+	width: 72px;
+	}
+
+.pay
+	{
+	background-position: -584px -252px;	/* left top */
+	height:30px;
+	width: 72px;
+	border:1px solid green;
+	}
+/* End Image */
+
+.flag_sv {
+	background-position: -906px -177px;
+	height: 16px;
+	width: 18px;
+}
+.flag_hr {
+	background-position: -889px -194px;
+	height: 16px;
+	width: 18px;
+}
