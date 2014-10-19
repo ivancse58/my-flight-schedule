@@ -29,8 +29,8 @@ function advancedSearchWidget_Form($title) {
                     <td><input id="wcs3_ReturnDate" name="wcs3_ReturnDate" type="text"></td>
 		</tr>';		
 	 $form .='<tr>
-                    <td colspan="2">'.wcs3_generate_adult_child_select_list( 'wcs3_Adult_list', '#Adult' ).'
-                        '.wcs3_generate_adult_child_select_list( 'wcs3_Children_list', '#Children' ).'</td>
+                    <td colspan="2">'.wcs3_generate_widget_selectlist( 'wcs3_Adult_list', '#Adult' ).'
+                        '.wcs3_generate_widget_selectlist( 'wcs3_Children_list', '#Children' ).'</td>
 		</tr>';
          $form .='<tr align="center">
                     <td colspan="2"><input id="wcs3_book_flight_searchwidget" class="" type="submit" value="Find Flights" name="findwidget"></td>
@@ -98,10 +98,10 @@ function new_search_form($title){
                 <div class="float_left"><div class="wcs3_r3c4">Infants</div> </div>
         </div>
 	<div class="bg_form_wrap"> 
-                <div class="float_left"><div class="wcs3_r3c1">'.wcs3_generate_travel_classs_list( 'wcs3_travel_class_list').'</div> </div>
-                <div class="float_left"><div class="wcs3_r3c2">'.wcs3_generate_adult_child_select_list( 'wcs3_Adult_list', '#Adult' ).'</div> </div>
-                <div class="float_left"><div class="wcs3_r3c3">'.wcs3_generate_adult_child_select_list( 'wcs3_Children_list', '#Children' ).'</div> </div>
-                <div class="float_left"><div class="wcs3_r3c4">'.wcs3_generate_adult_child_select_list( 'wcs3_Children_list', '#Children' ).'</div> </div>
+                <div class="float_left"><div class="wcs3_r3c1">'.wcs3_generate_widget_selectlist( 'wcs3_travel_class_list', '#Economy' ).'</div> </div>
+                <div class="float_left"><div class="wcs3_r3c2">'.wcs3_generate_widget_selectlist( 'wcs3_Adult_list', '#Adult' ).'</div> </div>
+                <div class="float_left"><div class="wcs3_r3c3">'.wcs3_generate_widget_selectlist( 'wcs3_Children_list', '#Children' ).'</div> </div>
+                <div class="float_left"><div class="wcs3_r3c4">'.wcs3_generate_widget_selectlist( 'wcs3_Infants_list', '#Infants' ).'</div> </div>
 		
 	</div>
 	<div class="bg_form_wrap">

@@ -39,53 +39,6 @@ function wcs3_json_response( $data ) {
 }
 
 /**
- * Generates weekday array
- * 
- * @param bool $abbr: if TRUE returns abbreviated weekday names.
- */
-function wcs3_get_weekdays( $abbr = FALSE ) {
-    global $wp_locale;
-    
-    $days = array();
-    
-    $abbr = apply_filters( 'wcs3_abbr_weekdays', $abbr );
-    
-    if ($abbr) {
-        $abbr_array = $wp_locale->weekday_abbrev;
-        foreach ( $abbr_array as $value ) {
-            $days[] = $value;
-        }
-    }
-    else {
-        $days = $wp_locale->weekday;
-    }
-            
-    return $days;
-}
-
-/**
- * Returns an indexed array of weekday rotated according to $first_day_of_week.
- * 
- * @param bool $abbr: if TRUE returns abbreviated weekday names.
- * @param int $first_day_of_week: index.
- */
-function wcs3_get_indexed_weekdays( $abbr = FALSE, $first_day_of_week = 0 ) {
-    $weekdays = wcs3_get_weekdays( $abbr );
-    $weekdays = array_flip( $weekdays );
-    
-    if ( $first_day_of_week > 0 ) {
-    	// Rotate array based on first day of week setting.
-    	$slice1 = array_slice( $weekdays, $first_day_of_week );
-    	$slice2 = array_slice( $weekdays, 0, $first_day_of_week );
-    	$weekdays = array_merge( $slice1, $slice2 );
-    }
-    
-    $weekdays = apply_filters( 'wcs3_filter_indexed_weekdays', $weekdays );
-    
-    return $weekdays;
-}
-
-/**
  * Generages a simple HTML checkbox input field.
  * 
  * @param string $name: will be used both for name and id

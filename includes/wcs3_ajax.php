@@ -321,32 +321,4 @@ function wcs3_edit_schedule_entry_callback() {
 add_action( 'wp_ajax_edit_schedule_entry', 'wcs3_edit_schedule_entry_callback' );
 
 
-/**
- * Returns the schedule for a specific day.
- */
-function wcs3_get_day_schedule_callback() {
-    wcs3_verify_nonce();
-    
-    global $wpdb;
-    $response = __( 'Day schedule retrieved successfully', 'wcs3' );
-    $result = 'updated';
-    
-    $table = wcs3_get_table_name();
-    
-    $required = array(
-        'day' => __( 'Day' ),
-    );
-    
-    wcs3_verify_required_fields( $required );
-    
-    $day = sanitize_text_field( $_POST['day'] );
-    
-    $day_table = wcs3_render_day_table( $day );
-    
-    wcs3_json_response( array( 'html' => $day_table ) );
-    die();
-}
-
-// Register AJAX handler for get_day_schedule.
-add_action( 'wp_ajax_get_day_schedule', 'wcs3_get_day_schedule_callback' );
 ?>

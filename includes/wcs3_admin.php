@@ -121,10 +121,7 @@ function wcs3_schedule_management_page_callback() {
 ?>
 <?php
 function wcs3_schedule_management_page_grid_data(){
-?>    
-    
 
-<?php
     //b.sajal showing schedule table
     $day_data = wcs3_get_all_schedule(); 
     if($day_data)
@@ -314,19 +311,17 @@ function wcs3_generate_round_oneway_radio_list() {
     return $output;
 }
 
-function wcs3_generate_travel_classs_list( $name = '', $default = 'Economy' ) {
-    $values = array(
+/**
+ * Generates the simple #Travel Class/#Adults/#Children/#Infants list.
+*/
+function wcs3_generate_widget_selectlist( $name = '', $default = NULL ) {
+    if($default=='#Economy')
+        $values = array(
             '0' => __( 'Economy', 'wcs3' ),
             '1' => __( 'Business', 'wcs3' ),
             '2' => __( 'First', 'wcs3' ),
         );
-    return wcs3_select_list( $values, $name, $default );
-}
-/**
- * Generates the simple #Adult/#Children list.
- */
-function wcs3_generate_adult_child_select_list( $name = '', $default = NULL ) {
-    if($default=='#Adult')
+    if($default=='#Adult' || $default=='#Children' || $default=='#Infants')
         $values = array(
             '0' => __( '0', 'wcs3' ),
             '1' => __( '1', 'wcs3' ),
@@ -340,26 +335,11 @@ function wcs3_generate_adult_child_select_list( $name = '', $default = NULL ) {
             '9' => __( '9', 'wcs3' ),
             '10' => __( '10', 'wcs3' ),
         );
-    if($default=='#Children')
-        $values = array(
-            '0' => __( '0', 'wcs3' ),
-            '1' => __( '1', 'wcs3' ),
-            '2' => __( '2', 'wcs3' ),
-            '3' => __( '3', 'wcs3' ),
-            '4' => __( '4', 'wcs3' ),
-            '5' => __( '5', 'wcs3' ),
-            '6' => __( '6', 'wcs3' ),
-            '7' => __( '7', 'wcs3' ),
-            '8' => __( '8', 'wcs3' ),
-            '9' => __( '9', 'wcs3' ),
-            '10' => __( '10', 'wcs3' ),
-        );
-    
     return wcs3_select_list( $values, $name, $default );
 }
 
 /**
- * Delete schedule entries when class, instructor, or location gets deleted.
+ * Delete schedule entries when depart_airport_id, arrive_airport_id, or flight_no_id gets deleted.
  */
 function wcs3_schedule_sync( $post_id ) {
     global $wpdb;
