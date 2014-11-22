@@ -20,9 +20,7 @@ function checkSearch(){
 		alert('Please select departure date');
 		postform=false
 		}
-		if(jQuery("#wcs3_ReturnDate").val()=='Return date' && 
-		postform==true && 
-		jQuery("#RT").is(':checked')==true)
+		if(jQuery("#wcs3_ReturnDate").val()=='Return date' && postform==true &&  jQuery("#RT").is(':checked')==true)
 		{
 		alert('Please select return date');
 		postform=false
@@ -105,16 +103,7 @@ jQuery(document).ready( function($) {
         //ivan
 	var wcs3_bind_search_widget_datepicker_handler = function() {
                 var dateToday = new Date();
-//                jQuery('#wcs3_DepartureDate').datepicker({
-//                    dateFormat : 'yy-MM-dd',
-//                    minDate: dateToday
-//                });
-//                jQuery('#wcs3_ReturnDate').datepicker({
-//                    dateFormat : 'yy-MM-dd',
-//                    minDate: dateToday,
-//                });
             var dates = $("#wcs3_DepartureDate").datepicker({
-//                dateFormat : 'yy-MM-dd',
                 changeMonth: true,
                 minDate: dateToday,
                 onSelect: function(selectedDate) {
@@ -126,10 +115,7 @@ jQuery(document).ready( function($) {
             });
             
             var dates = $("#wcs3_ReturnDate").datepicker({
-//                dateFormat : 'yy-MM-dd',
-//                defaultDate: "+1w",
                 changeMonth: true,
-//                numberOfMonths: 3,
                 minDate: dateToday,
                 onSelect: function(selectedDate) {
                     var option = this.id == "from" ? "maxDate" : "minDate",

@@ -66,7 +66,7 @@ function wcs3_schedule_management_page_callback() {
         <div id="wcs3-schedule-management-form-wrapper">
             <table id="wcs3-schedule-management-form" class="widefat wp-list-table">
                 <tr>
-                    <td class="wcs3-col-label"><?php _e('Flight Date', 'wcs3'); ?></td>
+                    <td class="wcs3-col-label"><?php _e('Flight Date*', 'wcs3'); ?></td>
                     <td><input id="wcs3_flight_date" name="wcs3_flight_date" type="text"></td>
                 </tr>
                 <tr>
@@ -82,11 +82,11 @@ function wcs3_schedule_management_page_callback() {
                     <td><?php echo wcs3_generate_admin_select_list( 'Flight_NO', 'wcs3_Flight_NO' ); ?></td>
                 </tr>
                 <tr>
-                    <td class="wcs3-col-label"><?php _e('Start Time', 'wcs3'); ?></td>
+                    <td class="wcs3-col-label"><?php _e('Start Time (H:M)', 'wcs3'); ?></td>
                     <td><?php echo wcs3_generate_hour_select_list( 'wcs3_start_time', array( 'hour' => 9, 'minute' => 0 ) ); ?></td>
                 </tr>
                 <tr>
-                    <td class="wcs3-col-label"><?php _e('End Time', 'wcs3'); ?></td>
+                    <td class="wcs3-col-label"><?php _e('End Time (H:M)', 'wcs3'); ?></td>
                     <td><?php echo wcs3_generate_hour_select_list( 'wcs3_end_time', array( 'hour' => 10, 'minute' => 0 ) ); ?></td>
                 </tr>
                 <tr>
@@ -110,12 +110,14 @@ function wcs3_schedule_management_page_callback() {
             </div>
         </div> <!-- /#schedule-management-form-wrapper -->
     </form>
-    <div id="wcs3-schedule-events-list-wrapper">
+    
     <?php 
+//    echo '<div id="wcs3-schedule-events-list-wrapper">';
 //uncomment this code when data grid is done ivan    
-        echo wcs3_schedule_management_page_grid_data();
+//        echo wcs3_schedule_management_page_grid_data();
+//      echo '</div>';
+
     ?>
-    </div>
     <?php 
 }
 ?>

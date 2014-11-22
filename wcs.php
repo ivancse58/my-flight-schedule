@@ -148,14 +148,14 @@ function wcs3_register_schedule_management_page() {
 //    $menu_slug, 
 //    $function );
 //comment this because edit and delete not working
-    /*    
+  
     add_submenu_page( 'wcs3-schedule', 
             __( 'Schedule Management', 'wcs3' ), 
             __( 'All  Schedules', 'wcs3' ), 
             'manage_options', 
             'wcs3-all-schedules', 
             'wcs3_standard_datagrid_page_callback' );
-     */
+
     // Payment Gateway settings page
     add_submenu_page( 'wcs3-schedule', 
             __( 'Payment Gateway settings', 'wcs3' ), 

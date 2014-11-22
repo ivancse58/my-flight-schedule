@@ -15,6 +15,38 @@
 if(!class_exists('WP_List_Table')){
    require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
 }
+
+function prepare_where_condition() {
+        $where =  ' where `id` IS NOT NULL ';
+        
+        
+        $DAID = !empty($_POST["DAID"]) ? mysql_real_escape_string($_POST["DAID"]) : '';
+        if(empty($DAID) || !is_numeric($DAID) || $DAID<=0 ){ $DAID=0; }
+        if($DAID>0)
+            $where .= 'AND `depart_airport_id` = '.$DAID;
+        $AAID = !empty($_POST["AAID"]) ? mysql_real_escape_string($_POST["AAID"]) : '';
+        if(empty($AAID) || !is_numeric($AAID) || $AAID<=0 ){ $AAID=0; }
+        if($AAID>0)
+            $where .= ' AND `arrive_airport_id` = '.$AAID;
+        $fromDate = !empty($_POST["fromDate"]) ? mysql_real_escape_string($_POST["fromDate"]) : '';
+        
+        //if(empty($fromDate) || !is_numeric($fromDate) || $fromDate<=0 ){ $fromDate=0; }
+        
+        $toDate = !empty($_POST["toDate"]) ? mysql_real_escape_string($_POST["toDate"]) : '';
+        //if(empty($toDate) || !is_numeric($toDate) || $toDate<=0 ){ $toDate=0; }
+        if($fromDate!='From' && $toDate!='To'){
+            if(!empty($fromDate) && empty($toDate)){
+                $where .= " AND `flight_date` > '".$fromDate."'";
+            }
+            if(empty($fromDate) && !empty($toDate)){
+                $where .= " AND `flight_date` < '".$toDate."'";
+            }
+            if(!empty($fromDate)&&!empty($toDate)){
+                $where .= " AND `flight_date` Between '".$fromDate."' AND '".$toDate."'";
+            }
+        }
+       return  $where;
+   }
 class Link_List_Table extends WP_List_Table {
 
    /**
@@ -51,16 +83,25 @@ class Link_List_Table extends WP_List_Table {
      * Add extra markup in the toolbars before or after the list
      * @param string $which, helps you decide if you add the markup after (bottom) or before (top) the list
      */
-//    function extra_tablenav( $which ) {
-//       if ( $which == "top" ){
-//          //The code that goes before the table is here
-//          echo"Hello, I'm before the table";
-//       }
-//       if ( $which == "bottom" ){
-//          //The code that goes after the table is there
-//          echo"Hi, I'm after the table";
-//       }
-//    }
+    function extra_tablenav( $which ) {
+            if ( $which == "top" ){
+            }
+            if ( $which == "bottom" ){
+                //The code that goes after the table is there
+            }
+    }
+    function display2() {
+        $form = "Airport: ";
+        $form .= wcs3_generate_admin_select_list( 'Airport_list', 'DAID' );
+        $form .= wcs3_generate_admin_select_list( 'Airport_list', 'AAID' ).'<br/>';
+        $form .='Flight Date: ';
+        $form .='<input size="17" id="fromDate" name="fromDate" type="text"  value="From">';		
+                
+        $form .='<input size="17" id="toDate" name="toDate" type="text" value="To">';
+        $form .='&nbsp&nbsp&nbsp';
+        $form .='<input type="submit" onclick="checkSearch();" value="Filter" class="button action" id="doaction" name="">';
+        echo $form;
+    }
     /**
     * Define the columns that are going to be used in the table
     * @return array $columns, the array of columns to use with the table
@@ -102,7 +143,7 @@ class Link_List_Table extends WP_List_Table {
     function column_id($item){
         //Build row actions
         $actions = array(
-            'edit'      => sprintf('<a href="?page=%s&action=%s&data=%s">Edit</a>',$_REQUEST['page'],'edit',$item->id),
+            'edit'      => sprintf('<a href="?page=wcs3-schedule&row_id=%s">Edit</a>',$item->id),
             'delete'    => sprintf('<a href="?page=%s&action=%s&data=%s">Delete</a>',$_REQUEST['page'],'delete',$item->id),
         );
         
@@ -134,6 +175,8 @@ class Link_List_Table extends WP_List_Table {
         }
         
     }
+    
+   
    /**
     * Prepare the table with different parameters, pagination, columns and table elements
     */
@@ -144,7 +187,9 @@ class Link_List_Table extends WP_List_Table {
 
       /* -- Preparing your query -- */
            $query = "SELECT * FROM $table";
-
+           $where = prepare_where_condition();
+//           echo $where;
+           $query.= $where;
       /* -- Ordering parameters -- */
           //Parameters that are going to be used to order the result
           $orderby = (!empty($_REQUEST['orderby'])) ? $_REQUEST['orderby'] : 'id'; //If no sort, default to title
@@ -197,4 +242,5 @@ class Link_List_Table extends WP_List_Table {
       /* -- Fetch the items -- */
          $this->items = $wpdb->get_results($query);
    }
+   
 }

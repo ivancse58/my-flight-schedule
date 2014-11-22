@@ -20,6 +20,13 @@ function wcs3_standard_datagrid_page_callback(){
     <div class="wrap">
         
         <div id="icon-users" class="icon32"><br/></div>
+        <form id="data-filter" method="post">
+            <!-- For plugins, we also need to ensure that the form posts back to our current page -->
+            <input type="hidden" name="page" value="<?php echo $_REQUEST['page'] ?>" />
+            <!-- Now we can render the completed list table -->
+            <?php $testListTable->display2() ?>
+        </form>
+        
         <h2>List Table </h2>
       <!-- Forms are NOT created automatically, so you need to wrap the table in one to use features like bulk actions -->
         <form id="movies-filter" method="get">
