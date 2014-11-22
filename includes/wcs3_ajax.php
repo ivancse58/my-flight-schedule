@@ -106,22 +106,42 @@ function wcs3_add_or_update_schedule_entry_callback() {
     $tz = new DateTimeZone( $timezone );
     $start_dt = new DateTime( WCS3_BASE_DATE . ' ' . $start, $tz );
     $end_dt = new DateTime( WCS3_BASE_DATE . ' ' . $end, $tz );
-	
-    if(!($flight_date))
-    {
-     $response = __( 'You must select the flight date', 'wcs3' );
-     $result = 'error';
+
+//  If the flight is going from that departed airport to anywhere on that day and time
+    
+    $flight_time_collision = $wpdb->get_col( $wpdb->prepare(
+         		"
+         		SELECT id FROM $table
+         		WHERE flight_date = %s  AND depart_airport_id = %d AND flight_no_id = %d 
+         		AND %s < end_time AND %s > start_time
+         		AND id != %d
+         		",
+         		array(
+         		$flight_date,
+         		$depart_airport_id,
+			$flight_no_id,
+         		$start,
+         		$end,
+         		$row_id,
+         ) ) );  
+   
+    if(!($flight_date)){
+        $response = __( 'You must select the flight date', 'wcs3' );
+        $result = 'error';
     }
     else if ( $start_dt >= $end_dt ) {
-            // Invalid flight time
-            $response = __( 'A flight cannot start before it ends', 'wcs3' );
-            $result = 'error';
-    }
-    else if($adult_fare<=0 || $child_fare <=0  || $tax_per_person <=0)
-	{
-		$response = __( 'Fare and tax amount can not be zero.', 'wcs3' );
+        // Invalid flight time
+        $response = __( 'A flight cannot start before it ends', 'wcs3' );
         $result = 'error';
+    }
+    else if($adult_fare<=0 || $child_fare <=0  || $tax_per_person <=0){
+            $response = __( 'Fare and tax amount can not be zero.', 'wcs3' );
+            $result = 'error';
 	}
+    else if ( !empty( $flight_time_collision ) ) {
+        $response = __( 'This flight is not free on this day/time on this airport', 'wcs3' );
+        $result = 'error';
+    } 
     else {
         //data table columns
         $data = array(
