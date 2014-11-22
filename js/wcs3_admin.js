@@ -1,6 +1,16 @@
 /**
  * Javascript for WCS3 admin.
  */
+ function list_table_search_filter_value_set(flag,args){
+     if(flag==true){
+//        alert(args['DAID']);
+        jQuery("#DAID").val(args['DAID']);
+	jQuery("#AAID").val(args['AAID']);
+        jQuery("#FLNO").val(args['FLNO']);
+        jQuery("#fromDate").val(args['fromDate']);
+	jQuery("#toDate").val(args['toDate']);
+     }
+ }
 function checkSearch(){
     var postform=true;
     if(jQuery("#fromDate").val()!='From'){
@@ -29,12 +39,16 @@ function checkSearch(){
 		wcs3_bind_schedule_submit_handler();
 		wcs3_bind_schedule_delete_handler();
 		wcs3_bind_schedule_edit_handler();
-		wcs3_bind_colorpickers();
-		wcs3_bind_import_update();
+		
                 wcs3_bind_schedule_submit_datepicker_handler();//ivan
 		var cc=read_query_string();
+//                 alert(cc['row_id']);
+                if(cc['page'] == 'wcs3-all-schedules'){
+//                    alert(cc['DAID']);
+                    if(cc['DAID'] != undefined)
+                        list_table_search_filter_value_set(true,cc);
+                }
                 if(cc['row_id'] != undefined){
-//                    alert(cc['row_id']);
                     edit_fucntion_enable_from_url(cc['row_id']);
                 }
                 
@@ -366,25 +380,7 @@ function checkSearch(){
 			$('.wcs3-ajax-text').fadeOut('slow');
 		}, 2000);
 	}
-	
-	/**
-	 * Extracts the day ID from an element (delete or edit).
-	 */
-	var get_day_from_element = function(elem) {
-		var cls = elem.className,
-			m,
-			day;
-		
-		m = cls.match(/wcs3-action-button-day-(\d)+/g);
-		if (m.length > 0) {
-			m = m[0];
-			day = m.replace('wcs3-action-button-day-', '');
-			return parseInt(day);
-		}
-		else {
-			return false;
-		}
-	}
+
 	
 	/**
 	 * Checks if a jQuery element is already bound to the 'click' event.
@@ -405,61 +401,13 @@ function checkSearch(){
 			}
 		}
 	}
-	
-	/**
-	 * Binds the colorpicker plugin to the selectors
-	 */
-	var wcs3_bind_colorpickers = function() {
-		$('.wcs_colorpicker').each(function(index) {
-			var elementName = $(this).attr('id');
-			$(this).ColorPicker({
-				onChange: function (hsb, hex, rgb) {
-					$('#' + elementName).val(hex);
-					$('.' + elementName).css('background', '#' + hex);
-				},
-				onBeforeShow: function (hsb, hex, rgb) {
-					$(this).ColorPickerSetColor(this.value);
-				}
-			});
-		});
-	}
-		
-
-	var wcs3_bind_import_update = function() {
-		$('#wcs3_import_wcs2_data').click(function(e) {
-			var confirm;
-			
-			e.preventDefault();
-			
-			entry = {
-					action: 'import_update_data',
-					security: WCS3_AJAX_OBJECT.ajax_nonce,
-				};
-			
-			// Confirm delete operation.
-			confirm = window.confirm(WCS3_AJAX_OBJECT.import_warning);
-			if (!confirm) {
-				return;
-			}
-			
-			$('#wcs3-import-update-wrapper .wcs3-ajax-loader').show();
-			
-			jQuery.post(WCS3_AJAX_OBJECT.ajax_url, entry, function(data) {
-				schedule_item_message(data.response, data.result);
-				
-			}).fail(function(err) {
-				// Failed
-				console.error(err);				
-			}).always(function() {	
-				// Re-bind handlers
-				$('#wcs3-import-update-wrapper .wcs3-ajax-loader').hide();
-			});
-		});
-		
-	}
         function read_query_string(){
             var a=window.location.search.split(/\?/);
+            
+//            a = decodeURIComponent(a);
+//            alert(a[1]);
             var b=a[1].split("&");
+//            alert(b);
             var c={};
             for(var i=0;i<b.length;i++){
                 var d=b[i].split("=");
@@ -480,6 +428,11 @@ function checkSearch(){
                 selected:'selected',
                 value: 0,
                 html: 'Arrive Airport'
+            }));
+            $('#FLNO').prepend($('<option>', {
+                selected:'selected',
+                value: 0,
+                html: 'All Flight'
             }));
         }
 //ivan

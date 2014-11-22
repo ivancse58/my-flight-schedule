@@ -19,20 +19,26 @@ if(!class_exists('WP_List_Table')){
 function prepare_where_condition() {
         $where =  ' where `id` IS NOT NULL ';
         
-        
-        $DAID = !empty($_POST["DAID"]) ? mysql_real_escape_string($_POST["DAID"]) : '';
+        $DAID = !empty($_GET["DAID"]) ? mysql_real_escape_string($_GET["DAID"]) : '';
         if(empty($DAID) || !is_numeric($DAID) || $DAID<=0 ){ $DAID=0; }
         if($DAID>0)
-            $where .= 'AND `depart_airport_id` = '.$DAID;
-        $AAID = !empty($_POST["AAID"]) ? mysql_real_escape_string($_POST["AAID"]) : '';
+            $where .= ' AND `depart_airport_id` = '.$DAID;
+        
+        $AAID = !empty($_GET["AAID"]) ? mysql_real_escape_string($_GET["AAID"]) : '';
         if(empty($AAID) || !is_numeric($AAID) || $AAID<=0 ){ $AAID=0; }
         if($AAID>0)
             $where .= ' AND `arrive_airport_id` = '.$AAID;
-        $fromDate = !empty($_POST["fromDate"]) ? mysql_real_escape_string($_POST["fromDate"]) : '';
+        
+        $FLNO = !empty($_GET["FLNO"]) ? mysql_real_escape_string($_GET["FLNO"]) : '';
+        if(empty($FLNO) || !is_numeric($FLNO) || $FLNO<=0 ){ $FLNO=0; }
+        if($FLNO>0)
+            $where .= ' AND `flight_no_id` = '.$FLNO;
+
+        $fromDate = !empty($_GET["fromDate"]) ? mysql_real_escape_string($_GET["fromDate"]) : '';
         
         //if(empty($fromDate) || !is_numeric($fromDate) || $fromDate<=0 ){ $fromDate=0; }
         
-        $toDate = !empty($_POST["toDate"]) ? mysql_real_escape_string($_POST["toDate"]) : '';
+        $toDate = !empty($_GET["toDate"]) ? mysql_real_escape_string($_GET["toDate"]) : '';
         //if(empty($toDate) || !is_numeric($toDate) || $toDate<=0 ){ $toDate=0; }
         if($fromDate!='From' && $toDate!='To'){
             if(!empty($fromDate) && empty($toDate)){
@@ -91,15 +97,19 @@ class Link_List_Table extends WP_List_Table {
             }
     }
     function display2() {
-        $form = "Airport: ";
+        $form = "<h2>Search Filter </h2>";
+        $form .= "Airport:&nbsp&nbsp";
         $form .= wcs3_generate_admin_select_list( 'Airport_list', 'DAID' );
         $form .= wcs3_generate_admin_select_list( 'Airport_list', 'AAID' ).'<br/>';
+        $form .='Flight Date:  ';
+        $form .= wcs3_generate_admin_select_list( 'Flight_NO', 'FLNO' ).'<br/>';
         $form .='Flight Date: ';
         $form .='<input size="17" id="fromDate" name="fromDate" type="text"  value="From">';		
                 
         $form .='<input size="17" id="toDate" name="toDate" type="text" value="To">';
         $form .='&nbsp&nbsp&nbsp';
         $form .='<input type="submit" onclick="checkSearch();" value="Filter" class="button action" id="doaction" name="">';
+        
         echo $form;
     }
     /**
