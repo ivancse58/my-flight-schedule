@@ -86,21 +86,21 @@ function wcs3_load_fare_info_query( $TripType, $wcs3_Depart_Airport_list, $wcs3_
 function wcs3_all_steps(){
 ?>
 <div class="float_left paddt10">
-				<div class="float_left"><div onclick="location.href='../';" title="Back" class="Backbutton_Orange" onmouseup="this.className='Backbutton_Orange_onclick';"></div></div>
-				<div style="background-color:#70a5ae;behavior: url(https://storage.aerocrs.com/74/PIE.htc);border-radius: 6px;" id="progress">
-					<ul> 
-						<li><span style="color:#007174" class="t_10blprogress paddl10"><a href="../index.asp"> Search </a></span></li>
-						<li><span class="t_11wh paddrl15">|</span></li>
-						<li><span class="t_10blackprogress"> Select </span></li>
-						<li><span class="t_11wh paddrl15">|</span></li> 
-						<li> Itinerary </li>
-						<li><span class="t_11wh paddrl15">|</span></li>
-						<li> Payment </li>
-						<li><span class="t_11wh paddrl15">|</span></li>
-						<li> Confirmation </li>
-					</ul>
-				</div>
-			</div>
+    <div class="float_left"><div onclick="location.href='../';" title="Back" class="Backbutton_Orange" onmouseup="this.className='Backbutton_Orange_onclick';"></div></div>
+	<div style="background-color:#70a5ae;behavior: url(https://storage.aerocrs.com/74/PIE.htc);border-radius: 6px;" id="progress">
+            <ul> 
+                    <li><span style="color:#007174" class="t_10blprogress paddl10"><a href="../index.asp"> Search </a></span></li>
+                    <li><span class="t_11wh paddrl15">|</span></li>
+                    <li><span class="t_10blackprogress"> Select </span></li>
+                    <li><span class="t_11wh paddrl15">|</span></li> 
+                    <li> Itinerary </li>
+                    <li><span class="t_11wh paddrl15">|</span></li>
+                    <li> Payment </li>
+                    <li><span class="t_11wh paddrl15">|</span></li>
+                    <li> Confirmation </li>
+		</ul>
+	</div>
+</div>
 <?php
 }
 function wcs3_display_date($wcs3_DepartureDate,$x){

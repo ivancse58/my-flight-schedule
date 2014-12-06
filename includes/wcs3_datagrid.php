@@ -2,7 +2,7 @@
 /**
  * Data Grid page.
  */
-require_once WCS3_PLUGIN_DIR . '/includes/Link_List_Table.php';
+require_once WCS3_PLUGIN_DIR . '/includes/FlightSchedule_ListTable.php';
 
 //$wp_list_table = new Link_List_Table();
 //$wp_list_table->prepare_items();
@@ -12,7 +12,7 @@ require_once WCS3_PLUGIN_DIR . '/includes/Link_List_Table.php';
 function wcs3_standard_datagrid_page_callback(){
     
     //Create an instance of our package class...
-    $testListTable = new Link_List_Table();
+    $testListTable = new FlightSchedule_ListTable();
     //Fetch, prepare, sort, and filter our data...
     $testListTable->prepare_items();
     
@@ -27,7 +27,7 @@ function wcs3_standard_datagrid_page_callback(){
             <?php $testListTable->display2() ?>
         </form>
         
-        <h2>List Table </h2>
+        <h2>Flight Schedule Data Table </h2>
       <!-- Forms are NOT created automatically, so you need to wrap the table in one to use features like bulk actions -->
         <form id="movies-filter" method="get">
             <!-- For plugins, we also need to ensure that the form posts back to our current page -->

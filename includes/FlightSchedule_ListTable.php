@@ -7,7 +7,7 @@
  */
 
 /**
- * Description of Link_List_Table
+ * Description of FlightSchedule_ListTable
  *
  * @author r.karim
  */
@@ -53,7 +53,7 @@ function prepare_where_condition() {
         }
        return  $where;
    }
-class Link_List_Table extends WP_List_Table {
+class FlightSchedule_ListTable extends WP_List_Table {
 
    /**
     * Constructor, we override the parent to pass our own arguments
