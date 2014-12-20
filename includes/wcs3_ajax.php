@@ -224,7 +224,6 @@ function wcs3_departure_list_change_callback() {
             }
             else {
                 $response = __( wcs3_generate_admin_select_list( 'Airport_list', 'wcs3_Arrive_Airport_list',NULL,$row_id) );
-//                $response = __( wcs3_generate_arrived_airport_for_depart_airport_list( 'Airport_list', 'wcs3_Arrive_Airport_list',NULL,$row_id) );
                 $result = 'success';
             }
         
@@ -233,16 +232,19 @@ function wcs3_departure_list_change_callback() {
     die();
 }
 function wcs3_departure_list_change2_callback() {
-    $response = __( 'Schedule entry added successfully', 'wcs3' );
+    $response = __( '<select name="wcs3_Arrive_Airport_list" id="wcs3_Arrive_Airport_list">
+        <option value="0">Nothing Found</option>
+        </select>', 'wcs3' );
     $result = 'updated';
     $row_id = NULL;
     $row_id = sanitize_text_field( $_POST['depart_airport_id'] );
             if ($row_id === NULL) {
-            	$response = __( 'Failed to Select', 'wcs3' );
+            	$response = __( '<select name="wcs3_Arrive_Airport_list" id="wcs3_Arrive_Airport_list">
+                <option value="0">Nothing Found</option>
+                </select>', 'wcs3' );
             	$result = 'error';
             }
             else {
-//                $response = __( wcs3_generate_admin_select_list( 'Airport_list', 'wcs3_Arrive_Airport_list',NULL,$row_id) );
                 $response = __( wcs3_generate_arrived_airport_for_depart_airport_list( 'Airport_list', 'wcs3_Arrive_Airport_list',NULL,$row_id) );
                 $result = 'success';
             }

@@ -195,7 +195,7 @@ function wcs3_generate_arrived_airport_for_depart_airport_list( $type, $name = '
          $Departurequery = "SELECT DISTINCT `arrive_airport_id` FROM $table";
          $Departurequery.= " where `depart_airport_id` = '".$main_depart_airport_id."'";
          $departure_data = $wpdb->get_results($Departurequery); 
-         
+         return $Departurequery;
          $arrived_airport_ids = array();
          
          if (!empty($departure_data)) {
